@@ -1,0 +1,9 @@
+C:\Users\300745117\Documents\GitHub\PCBuilderWebApp\WebApplication\WebApplication\bin\WebApplication.dll.config
+C:\Users\300745117\Documents\GitHub\PCBuilderWebApp\WebApplication\WebApplication\bin\WebApplication.dll
+C:\Users\300745117\Documents\GitHub\PCBuilderWebApp\WebApplication\WebApplication\bin\WebApplication.pdb
+C:\Users\300745117\Documents\GitHub\PCBuilderWebApp\WebApplication\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\300745117\Documents\GitHub\PCBuilderWebApp\WebApplication\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\300745117\Documents\GitHub\PCBuilderWebApp\WebApplication\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
+C:\Users\300745117\Documents\GitHub\PCBuilderWebApp\WebApplication\WebApplication\obj\Debug\WebApplication.csproj.CoreCompileInputs.cache
+C:\Users\300745117\Documents\GitHub\PCBuilderWebApp\WebApplication\WebApplication\obj\Debug\WebApplication.dll
+C:\Users\300745117\Documents\GitHub\PCBuilderWebApp\WebApplication\WebApplication\obj\Debug\WebApplication.pdb
