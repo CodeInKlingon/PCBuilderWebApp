@@ -1,0 +1,53 @@
+user/customer
+	customerid
+	username
+	email
+
+payment method
+	Name
+	Card Number
+	Billing Address
+	
+configuration
+	configId
+	customerID
+	configName
+	date created
+	
+configItems
+	configId
+	productId
+
+orders
+	orderID
+	customer id
+	payment id
+	Order date
+	shipping address
+	
+
+orderitems
+	orderID
+	product number
+	quantity
+	product price id
+
+products
+	product id
+	product name
+	product number
+	manufacturer id
+
+manufacturer
+	manufacturer id
+	Name
+
+product price
+	price id
+	product id	
+	price start date
+	price end date
+	Price
+	Discount
+	
+
