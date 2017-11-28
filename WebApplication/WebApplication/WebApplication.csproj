@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddPart.ascx" />
     <Content Include="Checkout.aspx" />
     <Content Include="Default.Master" />
     <None Include="packages.config" />
@@ -79,9 +80,17 @@
   <ItemGroup>
     <Content Include="Configuration.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Styles\Style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPart.ascx.cs">
+      <DependentUpon>AddPart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddPart.ascx.designer.cs">
+      <DependentUpon>AddPart.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Checkout.aspx.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

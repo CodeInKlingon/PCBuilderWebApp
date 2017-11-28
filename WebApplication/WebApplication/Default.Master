@@ -4,6 +4,7 @@
 
 <html>
 <head runat="server">
+    <link rel="stylesheet" href="Styles/style.css">
     <title>
     <asp:ContentPlaceHolder ID="title" runat="server">
     </asp:ContentPlaceHolder>
@@ -11,9 +12,14 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+        <div id="container">
+            <div id="header">Header</div>
+            <div id="navbar">Nav</div>
+                <div id="mainContent">
+                    <asp:ContentPlaceHolder ID="Content" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            <div id="footer">Footer</div>
         </div>
     </form>
 </body>

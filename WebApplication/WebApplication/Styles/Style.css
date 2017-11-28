@@ -1,0 +1,28 @@
+﻿body {
+    background-color:gray;
+}
+
+#container {
+    width: 800px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:white;
+}
+
+#Header {
+
+}
+
+#Nav {
+
+}
+
+#Footer {
+
+}
+
+.addPartButton {
+    height:200px;
+    text-align:center;
+    width:100%;
+}

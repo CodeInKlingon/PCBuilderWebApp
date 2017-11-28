@@ -10,15 +10,15 @@
 namespace WebApplication {
     
     
-    public partial class Configuration {
+    public partial class AddPart {
         
         /// <summary>
-        /// AddPart control.
+        /// HyperLink1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::WebApplication.AddPart AddPart;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
     }
 }
