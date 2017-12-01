@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/Style.css">
     <title>
     <asp:ContentPlaceHolder ID="title" runat="server">
     </asp:ContentPlaceHolder>
@@ -13,13 +13,42 @@
 <body>
     <form id="form1" runat="server">
         <div id="container">
-            <div id="header">Header</div>
-            <div id="navbar">Nav</div>
-                <div id="mainContent">
+            <div id="headerContainer" >
+                <div id="header" class="inner">
+                    <div id="login"> 
+                        <asp:Button ID="btnSignIn" runat="server" Text="Sign In" CssClass="textButton" OnClick="btnSignIn_Click" />
+                        <br />
+                        <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="textButton" OnClick="btnRegister_Click" />
+
+                    </div>
+                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/banner.png" OnClick="ImageButton1_Click" />   
+                    
+                </div>
+            </div>
+            <div id="navbarContainer" >
+                <div id="navbar" class="inner">
+                    <ul>
+                        <li><a href="Default.aspx">Home</a></li>
+                        <li><a href="Configuration.aspx">My Configuration</a></li>
+                        <li><a href="PArts.aspx">Parts</a></li>
+                        <li> <a href="Checkout.aspx">Checkout</a></li>
+                        <li> <a href="About.aspx">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="contentContainer">
+                <div id="mainContent" class="inner">
                     <asp:ContentPlaceHolder ID="Content" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
-            <div id="footer">Footer</div>
+            </div>
+            <div id="footerContainer">
+                <div id="footer"  class="inner">
+                    Copyright 2017
+
+                </div>
+
+            </div>
         </div>
     </form>
 </body>

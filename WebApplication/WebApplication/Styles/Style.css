@@ -1,28 +1,115 @@
 ﻿body {
-    background-color:gray;
+    font-family:Arial;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: white;
 }
 
-#container {
-    width: 800px;
+.inner {
+    width: 1200px;
     margin-left:auto;
     margin-right:auto;
-    background-color:white;
 }
 
-#Header {
-
+#headerContainer {
+    background-color: #ffffff;
+    height: 100px;
+    margin-bottom: 0px;
 }
 
-#Nav {
-
+.textButton {
+    background-color: rgba(255, 255, 255, 0.00);
+    border: none;
+    color: black;
+    text-decoration: underline;
+    display: inline-block;
+    font-size: 16px;
 }
 
-#Footer {
+.textHeading {
+    color:black;
+    font-size:18pt;
+}
+
+#header {
+
+}
+#login {
+    float: right;
+    clear:both;
+    text-align:center;
+    height:100px;
+    line-height:50px;
+}
+
+#navbarContainer {
+    background-color: #24292e;
+    color: white;
+    height: 35px;
+    clear: left;
+}
+
+#navbar ul {
+    list-style: none;
+    padding-left: 0;
+}
+#navbar ul li a {
+    float: left;
+    color:white;
+    text-decoration:none;
+    padding-left:20px;
+    padding-right:20px;
+    height: 35px;
+    text-align:center;
+    line-height:35px;
+}
+
+#navbar ul li a:hover {
+    background-color: #464d55;
+}
+
+.navItem {
+    height: 60px;
+    padding: 10px;
+    vertical-align: central;
+    color: #ffffff;
+}
+#contentContainer {
+    background-color: #ededed;
+}
+#mainContent {
+    clear: left;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#SumamryBar {
+    float: right;
+    padding: 15px 15px 15px 15px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.21);
+}
+#footerContainer {
+    background-color: #ffffff;
+    height:100%;
+}
+
+#footer {
+    padding:15px;
 
 }
 
 .addPartButton {
-    height:200px;
-    text-align:center;
-    width:100%;
+    height: 100px;
+    color: #3f87de;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+    font-size:x-large;
+    width: 300px;
+    border: thick dashed #3f87de;
+    border-radius: 25px;
+    margin-left:auto;
+    margin-right:auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.31);
 }

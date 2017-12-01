@@ -13,5 +13,20 @@ namespace WebApplication
         {
 
         }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("Default.aspx");
+        }
+
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnSignIn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

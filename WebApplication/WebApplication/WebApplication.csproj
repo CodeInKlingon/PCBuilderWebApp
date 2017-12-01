@@ -80,6 +80,8 @@
   <ItemGroup>
     <Content Include="Configuration.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Images\banner.png" />
+    <Content Include="Styles\bootstrap.css" />
     <Content Include="Styles\Style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
