@@ -2,6 +2,7 @@ user/customer
 	customerid
 	username
 	email
+	password
 
 payment method
 	Name

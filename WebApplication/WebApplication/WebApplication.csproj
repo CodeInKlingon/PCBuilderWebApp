@@ -67,6 +67,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddPart.ascx" />
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
     <Content Include="Checkout.aspx" />
     <Content Include="Default.Master" />
     <None Include="packages.config" />
@@ -130,6 +134,9 @@
       <DependentUpon>Parts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\products\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
