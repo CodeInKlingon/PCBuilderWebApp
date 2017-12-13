@@ -140,3 +140,13 @@
     height: 100px;
     border: thick dashed #a7a7a7;
 }
+
+.FormCenter {
+    text-align: right;
+    width: 300px;
+    float: left;
+}
+
+.center {
+
+}
