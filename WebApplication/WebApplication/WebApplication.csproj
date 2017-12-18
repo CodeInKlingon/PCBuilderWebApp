@@ -72,6 +72,8 @@
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
     <Content Include="Checkout.aspx" />
+    <Content Include="ConfigListItemControl.ascx" />
+    <Content Include="CreateNewConfigControl.ascx" />
     <Content Include="Default.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
@@ -85,6 +87,8 @@
     <Content Include="Configuration.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Images\banner.png" />
+    <Content Include="LoginAndRegisterPromptControl.ascx" />
+    <Content Include="MyConfigurations.aspx" />
     <Content Include="Parts.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Styles\bootstrap.css" />
@@ -106,12 +110,26 @@
     <Compile Include="Checkout.aspx.designer.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ConfigListItemControl.ascx.cs">
+      <DependentUpon>ConfigListItemControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConfigListItemControl.ascx.designer.cs">
+      <DependentUpon>ConfigListItemControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Configuration.aspx.cs">
       <DependentUpon>Configuration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Configuration.aspx.designer.cs">
       <DependentUpon>Configuration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateNewConfigControl.ascx.cs">
+      <DependentUpon>CreateNewConfigControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateNewConfigControl.ascx.designer.cs">
+      <DependentUpon>CreateNewConfigControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -126,6 +144,20 @@
     </Compile>
     <Compile Include="Default.Master.designer.cs">
       <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAndRegisterPromptControl.ascx.cs">
+      <DependentUpon>LoginAndRegisterPromptControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginAndRegisterPromptControl.ascx.designer.cs">
+      <DependentUpon>LoginAndRegisterPromptControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyConfigurations.aspx.cs">
+      <DependentUpon>MyConfigurations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyConfigurations.aspx.designer.cs">
+      <DependentUpon>MyConfigurations.aspx</DependentUpon>
     </Compile>
     <Compile Include="Parts.aspx.cs">
       <DependentUpon>Parts.aspx</DependentUpon>

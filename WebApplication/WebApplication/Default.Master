@@ -16,9 +16,30 @@
             <div id="headerContainer" >
                 <div id="header" class="inner">
                     <div id="login"> 
-                        <asp:Button ID="btnSignIn" runat="server" Text="Sign In" CssClass="textButton" OnClick="btnSignIn_Click" />
-                        <br />
-                        <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="textButton" OnClick="btnRegister_Click" />
+                        <asp:MultiView ID="MultiView1" runat="server">
+            <asp:View ID="View1" runat="server">
+                <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" />
+                <br />
+                <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" Text="Register" />
+            </asp:View>
+            <asp:View ID="View2" runat="server">
+                Username<asp:TextBox ID="txtUsername" runat="server" ValidationGroup="login"></asp:TextBox>
+                <br />
+                Password<asp:TextBox ID="txtPassword" runat="server" TextMode="Password" ValidationGroup="login"></asp:TextBox>
+                <br />
+                <asp:Button ID="btnLogin2" runat="server" OnClick="btnLogin2_Click" Text="Login" ValidateRequestMode="Enabled" ValidationGroup="login" />
+                <asp:Button ID="btnCancel" runat="server" OnClick="btnCancel_Click" Text="Cancel" />
+                <br />
+                <asp:Label ID="lblLoginStatus" runat="server" Text=""></asp:Label>
+            </asp:View>
+            <asp:View ID="View3" runat="server">
+                Welcome
+                <asp:Label ID="lblUsername" runat="server" Text="Label"></asp:Label>
+                .&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="Logout" />
+            </asp:View>
+        </asp:MultiView>
+                        
 
                     </div>
                     <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/banner.png" OnClick="ImageButton1_Click" />   
@@ -29,7 +50,7 @@
                 <div id="navbar" class="inner">
                     <ul>
                         <li><a href="Default.aspx">Home</a></li>
-                        <li><a href="Configuration.aspx">My Configuration</a></li>
+                        <li><a href="MyConfigurations.aspx">My Configurations</a></li>
                         <li><a href="PArts.aspx">Parts</a></li>
                         <li> <a href="Checkout.aspx">Checkout</a></li>
                         <li> <a href="About.aspx">About</a></li>

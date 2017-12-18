@@ -11,7 +11,20 @@ namespace WebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Username"] != null)
+            {
+                if (Session["ConfigID"] != null)
+                {
+                    MultiView2.ActiveViewIndex = 1;
+                    txtConfigName.Text = ConfigGridView.Rows[0].Cells[2].Text;
+                }
+                else {
+                    Response.Redirect("MyConfigurations.aspx");
+                }
+            }
+            else {
+                Response.Redirect("MyConfigurations.aspx");
+            }
         }
     }
 }

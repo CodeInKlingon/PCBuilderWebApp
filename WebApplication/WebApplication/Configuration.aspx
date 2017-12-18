@@ -6,18 +6,53 @@
     Configuration
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Content" runat="server">
-    <asp:Label ID="Label1" runat="server" Text="Configuration Name" CssClass="textHeading"></asp:Label>&nbsp;&nbsp; <asp:TextBox ID="txtConfigName" runat="server" Font-Size="X-Large" Height="28px" Width="396px">MyConfig</asp:TextBox>
+    <asp:MultiView ID="MultiView2" runat="server">
+        <asp:View ID="View4" runat="server">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ConfigItem_Id" DataSourceID="SqlDataSource1">
+                <Columns>
+                    <asp:BoundField DataField="ConfigItem_Id" HeaderText="ConfigItem_Id" ReadOnly="True" SortExpression="ConfigItem_Id" />
+                    <asp:BoundField DataField="Config_Id" HeaderText="Config_Id" SortExpression="Config_Id" />
+                    <asp:BoundField DataField="Product_Id" HeaderText="Product_Id" SortExpression="Product_Id" />
+                </Columns>
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Databas1ConnectionString %>" SelectCommand="SELECT * FROM [ConfigItems] WHERE ([Config_Id] = @Config_Id)">
+                <SelectParameters>
+                    <asp:SessionParameter Name="Config_Id" SessionField="ConfigID" Type="Int32" />
+                </SelectParameters>
+            </asp:SqlDataSource>
+            <br />
+            <asp:GridView ID="ConfigGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="Conif_Id" DataSourceID="SqlDataSource2">
+                <Columns>
+                    <asp:BoundField DataField="Conif_Id" HeaderText="Conif_Id" ReadOnly="True" SortExpression="Conif_Id" />
+                    <asp:BoundField DataField="Username" HeaderText="Username" SortExpression="Username" />
+                    <asp:BoundField DataField="ConfigName" HeaderText="ConfigName" SortExpression="ConfigName" />
+                    <asp:BoundField DataField="DateCreated" HeaderText="DateCreated" SortExpression="DateCreated" />
+                </Columns>
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:Databas1ConnectionString %>" SelectCommand="SELECT * FROM [Configs] WHERE ([Conif_Id] = @Conif_Id)">
+                <SelectParameters>
+                    <asp:SessionParameter Name="Conif_Id" SessionField="ConfigID" Type="Int32" />
+                </SelectParameters>
+            </asp:SqlDataSource>
+        </asp:View>
+        <asp:View ID="View5" runat="server">
+            <br />
+    <asp:Label ID="Label1" runat="server" Text="Configuration Name" CssClass="textHeading"></asp:Label>&nbsp;&nbsp; 
+    <asp:TextBox ID="txtConfigName" runat="server"></asp:TextBox>
 <br />
     <br />
     <br />
-    <div id="SumamryBar">
-        Price<br />
-        <hr />
-        Total: $0<br />
-        <asp:Button ID="Button1" runat="server" Text="Checkout" />
-    </div>
-    <asp:Label ID="Label2" runat="server" Text="Your Selected Parts" Font-Size="X-Large"></asp:Label><br />
-    None.<br />
-&nbsp;<uc1:AddPart runat="server" id="AddPart" />
+    <asp:Button ID="Button8" runat="server" CssClass="PartCategoryButton" Text="CPU" />
+    <asp:Button ID="Button2" runat="server" CssClass="PartCategoryButton" Text="Motherboard" />
+    <asp:Button ID="Button3" runat="server" CssClass="PartCategoryButton" Text="Storage" />
+    <br />
+    <asp:Button ID="Button4" runat="server" CssClass="PartCategoryButton" Text="Memory" />
+    <asp:Button ID="Button5" runat="server" CssClass="PartCategoryButton" Text="Video Cards" />
+    <asp:Button ID="Button6" runat="server" CssClass="PartCategoryButton" Text="Power Supplies" />
+    <br />
+    <asp:Button ID="Button7" runat="server" CssClass="PartCategoryButton" Text="Cases" />
 
+        </asp:View>
+    </asp:MultiView>
+    
 </asp:Content>

@@ -15,12 +15,9 @@
     <span class="FormCenter">Email</span>
     <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" ValidationGroup="register"></asp:TextBox>
     <br />
-    <span class="FormCenter">First Name</span>
-    <asp:TextBox ID="txtFName" runat="server"></asp:TextBox>
-    <br />
-    <span class="FormCenter">Last Name</span>
-    <asp:TextBox ID="txtLName" runat="server"></asp:TextBox>
-    <br />
+    <asp:Label ID="lblStatus" runat="server"></asp:Label>
+&nbsp;<br />
+    &nbsp;<br />
     <br />
     <asp:Button ID="btnSubmit" runat="server" CssClass="center" OnClick="btnSubmit_Click" Text="Submit" />
     <br />
