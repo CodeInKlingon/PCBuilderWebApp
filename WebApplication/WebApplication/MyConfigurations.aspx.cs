@@ -26,13 +26,15 @@ namespace WebApplication
                 {
                     //no configs created yet
                     CreateNewConfigControl uc = (CreateNewConfigControl)Page.LoadControl("CreateNewConfigControl.ascx");
+                    
                     Panel1.Controls.Add(uc);
                 }
                 else
                 {
-                    for (int row = 0; row <= GridView1.Rows.Count; row++)
+                    for (int row = 0; row < GridView1.Rows.Count; row++)
                     {
                         ConfigListItemControl cl = (ConfigListItemControl)Page.LoadControl("ConfigListItemControl.ascx");
+                        cl.InitializeConfig(Convert.ToInt32(GridView1.Rows[row].Cells[0].Text), GridView1.Rows[row].Cells[2].Text, GridView1.Rows[row].Cells[3].Text);
                         Panel1.Controls.Add(cl);
                     }
                     CreateNewConfigControl uc = (CreateNewConfigControl)Page.LoadControl("CreateNewConfigControl.ascx");

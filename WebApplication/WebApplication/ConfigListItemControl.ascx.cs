@@ -9,15 +9,22 @@ namespace WebApplication
 {
     public partial class ConfigListItemControl : System.Web.UI.UserControl
     {
-
-        //public ConfigListItemControl(string configName, string dateCreated) {
-        //    lblConfigName.Text = configName;
-        //    lblDate.Text = dateCreated;
-        //}
+        int configID; 
+        public void InitializeConfig(int configID, string configName, string dateCreated)
+        {
+            lblConfigName.Text = configName;
+            lblDate.Text = dateCreated;
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btnSelect_Click(object sender, EventArgs e)
+        {
+            Session["ConfigID"] = configID;
+            Response.Redirect("Configuration.aspx");
         }
     }
 }
