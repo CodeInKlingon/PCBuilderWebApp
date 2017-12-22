@@ -75,6 +75,7 @@
     <Content Include="ConfigListItemControl.ascx" />
     <Content Include="CreateNewConfigControl.ascx" />
     <Content Include="Default.Master" />
+    <Content Include="App_Themes\LabelSkin1\LabelSkin1.skin" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

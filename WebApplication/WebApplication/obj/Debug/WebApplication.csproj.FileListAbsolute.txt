@@ -16,3 +16,12 @@ C:\Users\Daniel\Documents\GitHub\PCBuilderWebApp\WebApplication\WebApplication\o
 C:\Users\Daniel\Documents\GitHub\PCBuilderWebApp\WebApplication\WebApplication\obj\Debug\WebApplication.csproj.CoreCompileInputs.cache
 C:\Users\Daniel\Documents\GitHub\PCBuilderWebApp\WebApplication\WebApplication\obj\Debug\WebApplication.dll
 C:\Users\Daniel\Documents\GitHub\PCBuilderWebApp\WebApplication\WebApplication\obj\Debug\WebApplication.pdb
+H:\Comp - 229\PCBuilderWebApp-master\WebApplication\WebApplication\bin\WebApplication.dll.config
+H:\Comp - 229\PCBuilderWebApp-master\WebApplication\WebApplication\bin\WebApplication.dll
+H:\Comp - 229\PCBuilderWebApp-master\WebApplication\WebApplication\bin\WebApplication.pdb
+H:\Comp - 229\PCBuilderWebApp-master\WebApplication\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+H:\Comp - 229\PCBuilderWebApp-master\WebApplication\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+H:\Comp - 229\PCBuilderWebApp-master\WebApplication\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
+H:\Comp - 229\PCBuilderWebApp-master\WebApplication\WebApplication\obj\Debug\WebApplication.csproj.CoreCompileInputs.cache
+H:\Comp - 229\PCBuilderWebApp-master\WebApplication\WebApplication\obj\Debug\WebApplication.dll
+H:\Comp - 229\PCBuilderWebApp-master\WebApplication\WebApplication\obj\Debug\WebApplication.pdb
