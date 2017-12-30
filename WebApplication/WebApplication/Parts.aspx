@@ -5,15 +5,15 @@
     
     <asp:MultiView ID="MultiView1" runat="server" ActiveViewIndex="0">
         <asp:View ID="View2" runat="server">
-            <asp:Button ID="Button1" runat="server" Text="CPU" CssClass="PartCategoryButton" />
-            <asp:Button ID="Button2" runat="server" CssClass="PartCategoryButton" Text="Motherboard" />
-            <asp:Button ID="Button3" runat="server" CssClass="PartCategoryButton" Text="Storage" />
+            <asp:Button ID="Button1" runat="server" Text="CPU" CssClass="PartCategoryButton" OnClick="Button1_Click" />
+            <asp:Button ID="Button2" runat="server" CssClass="PartCategoryButton" Text="Motherboard" OnClick="Button2_Click" />
+            <asp:Button ID="Button3" runat="server" CssClass="PartCategoryButton" Text="Storage" OnClick="Button3_Click" />
             <br />
-            <asp:Button ID="Button4" runat="server" CssClass="PartCategoryButton" Text="Memory" />
-            <asp:Button ID="Button5" runat="server" CssClass="PartCategoryButton" Text="Video Cards" />
-            <asp:Button ID="Button6" runat="server" CssClass="PartCategoryButton" Text="Power Supplies" />
+            <asp:Button ID="Button4" runat="server" CssClass="PartCategoryButton" Text="Memory" OnClick="Button4_Click" />
+            <asp:Button ID="Button5" runat="server" CssClass="PartCategoryButton" Text="Video Cards" OnClick="Button5_Click" />
+            <asp:Button ID="Button6" runat="server" CssClass="PartCategoryButton" Text="Power Supplies" OnClick="Button6_Click" />
             <br />
-            <asp:Button ID="Button7" runat="server" CssClass="PartCategoryButton" Text="Cases" />
+            <asp:Button ID="Button7" runat="server" CssClass="PartCategoryButton" Text="Cases" OnClick="Button7_Click" />
         </asp:View>
         <asp:View ID="View1" runat="server">
             <div id="searchMenu">
@@ -25,11 +25,12 @@
                 <%-- USed to show search depth --%>
                 <asp:Menu ID="partsMenu" runat="server" Orientation="Horizontal">
                     <Items>
-                        <asp:MenuItem Text="Parts" Value="Parts"></asp:MenuItem> 
+                        <asp:MenuItem Text="Parts" Value="Parts" NavigateUrl="Parts.aspx"></asp:MenuItem> 
                     </Items>
                 </asp:Menu>
         
             </div>
+            
             <div id="searchFilter">
                 <br />
                 Search Filters<br />

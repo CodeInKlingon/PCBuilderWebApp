@@ -73,6 +73,7 @@
     </Content>
     <Content Include="Checkout.aspx" />
     <Content Include="ConfigListItemControl.ascx" />
+    <Content Include="ConfigPart.ascx" />
     <Content Include="CreateNewConfigControl.ascx" />
     <Content Include="Default.Master" />
     <Content Include="App_Themes\LabelSkin1\LabelSkin1.skin" />
@@ -91,6 +92,7 @@
     <Content Include="LoginAndRegisterPromptControl.ascx" />
     <Content Include="MyConfigurations.aspx" />
     <Content Include="Parts.aspx" />
+    <Content Include="PartsListItem.ascx" />
     <Content Include="Register.aspx" />
     <Content Include="Styles\bootstrap.css" />
     <Content Include="Styles\Style.css" />
@@ -117,6 +119,13 @@
     </Compile>
     <Compile Include="ConfigListItemControl.ascx.designer.cs">
       <DependentUpon>ConfigListItemControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigPart.ascx.cs">
+      <DependentUpon>ConfigPart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConfigPart.ascx.designer.cs">
+      <DependentUpon>ConfigPart.ascx</DependentUpon>
     </Compile>
     <Compile Include="Configuration.aspx.cs">
       <DependentUpon>Configuration.aspx</DependentUpon>
@@ -167,6 +176,13 @@
     <Compile Include="Parts.aspx.designer.cs">
       <DependentUpon>Parts.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PartsListItem.ascx.cs">
+      <DependentUpon>PartsListItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PartsListItem.ascx.designer.cs">
+      <DependentUpon>PartsListItem.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
@@ -178,6 +194,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\products\" />
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

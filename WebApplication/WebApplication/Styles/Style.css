@@ -143,3 +143,14 @@
     width: 300px;
     float: left;
 }
+.configListItem {
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(203, 203, 203);
+    width: 645px;
+    height: 40px;
+    line-height: 40px;
+    padding:2px 0px 2px 15px;
+    margin-bottom:25px;
+
+}

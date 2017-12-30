@@ -9,9 +9,10 @@ namespace WebApplication
 {
     public partial class ConfigListItemControl : System.Web.UI.UserControl
     {
-        int configID; 
+        int ConfigID; 
         public void InitializeConfig(int configID, string configName, string dateCreated)
         {
+            ConfigID = configID; 
             lblConfigName.Text = configName;
             lblDate.Text = dateCreated;
         }
@@ -23,7 +24,7 @@ namespace WebApplication
 
         protected void btnSelect_Click(object sender, EventArgs e)
         {
-            Session["ConfigID"] = configID;
+            Session["ConfigID"] = ConfigID;
             Response.Redirect("Configuration.aspx");
         }
     }
