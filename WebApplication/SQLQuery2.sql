@@ -1,0 +1,1 @@
+﻿Select * from ConfigItems as ci left join Configs as cc on cc.Config_Id = ci.Config_Id where cc.Config_Id = 4;
