@@ -16,13 +16,13 @@ namespace WebApplication
 
         public List<PCPart> parts;
 
-        bool hasCPU;
-        bool hasMotherboard;
-        bool hasCase;
-        bool hasStorage;
-        bool hasGraphics;
-        bool hasMemory;
-        bool hasPower;
+        int countCPU = 0;
+        int countMotherboard = 0;
+        int countCase = 0;
+        int countStorage = 0;
+        int countGraphics = 0;
+        int countMemory = 0;
+        int countPower = 0;
 
         //constructor that reads data from sql
         public PCConfiguration(int configID)
@@ -30,7 +30,7 @@ namespace WebApplication
             parts = new List<PCPart>();
 
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Databas1ConnectionString"].ConnectionString);
-            SqlCommand cmd = new SqlCommand("Select * from Configs Config_Id = " + configID + ";", conn);
+            SqlCommand cmd = new SqlCommand("Select * from Configs where Config_Id = " + configID + ";", conn);
             SqlDataReader reader;
 
 
@@ -55,10 +55,12 @@ namespace WebApplication
             conn.Close();
         }
 
+
+        //using a sql select to load in pc parts and save them to a list.
         public void LoadItems()
         {
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Databas1ConnectionString"].ConnectionString);
-            SqlCommand cmd = new SqlCommand("Select * from ConfigItems as ci left join Configs as cc on cc.Config_Id = ci.Config_Id where cc.Config_Id = " + ConfigID + ";", conn);
+            SqlCommand cmd = new SqlCommand("Select * from ConfigItems Config_Id = " + ConfigID + ";", conn);
             SqlDataReader reader;
 
             conn.Open();
@@ -71,7 +73,12 @@ namespace WebApplication
                 {
                     parts.Add(new PCPart(reader.GetInt32(2)));
                 }
-                
+                //all rows have been read 
+                    
+                //count the parts and add up for each category    
+
+                //sort pc parts.
+                SortItems();
             }
             else
             {
@@ -98,11 +105,41 @@ namespace WebApplication
                 sortedParts.Add(nextPart);
                 parts.Remove(nextPart);
             }
+            parts = sortedParts;
+
+        }
+
+        void countCategory(int category) {
+            foreach (PCPart p in parts) {
+                switch (p.category) {
+                    case 1:
+                        countCPU++;
+                        break;
+                    case 2:
+                        countMotherboard++;
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        break;
+                    case 7:
+                        break;
+                }
+            }
         }
 
         public void UpdateName(string newName)
         {
-
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Databas1ConnectionString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("UPDATE Configs SET ConfigName = '" + newName + "' WHERE Config_Id = '" + ConfigID +"';", conn);
+            
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
     }
 }

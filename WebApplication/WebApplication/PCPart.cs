@@ -15,7 +15,7 @@ namespace WebApplication
         public float ProductPrice { get; private set; }
         public int Manufacturer_Id { get; private set; }
         public string FileName { get; private set; }
-        public String category { get; private set; }
+        public int category { get; private set; }
 
         //constructor that reads data from sql
         public PCPart(int id)
@@ -26,11 +26,12 @@ namespace WebApplication
             conn.Open();
             reader = cmd.ExecuteReader();
 
+            reader.Read();
             Product_Id = reader.GetInt32(0);
             ProductName = reader.GetString(1);
             Manufacturer_Id = reader.GetInt32(2);
             FileName = reader.GetString(3);
-            ProductPrice = (float)reader.GetDouble(4);
+            ProductPrice = (float)reader.GetDouble(5);
             conn.Close();
         }
 
