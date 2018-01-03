@@ -18,19 +18,18 @@
 <br />
     <br />
     <br />
-    <asp:Button ID="Button8" runat="server" CssClass="PartCategoryButton" Text="CPU" OnClick="Button1_Click" />
-    <asp:Button ID="Button2" runat="server" CssClass="PartCategoryButton" Text="Motherboard" OnClick="Button2_Click" />
-    <asp:Button ID="Button3" runat="server" CssClass="PartCategoryButton" Text="Storage" OnClick="Button3_Click" />
-    <asp:Button ID="Button4" runat="server" CssClass="PartCategoryButton" Text="Memory" OnClick="Button4_Click" />
-    <asp:Button ID="Button5" runat="server" CssClass="PartCategoryButton" Text="Video Cards" OnClick="Button5_Click" />
-    <asp:Button ID="Button6" runat="server" CssClass="PartCategoryButton" Text="Power Supplies" OnClick="Button6_Click" />
-    <br />
-    <asp:Button ID="Button7" runat="server" CssClass="PartCategoryButton" Text="Cases" OnClick="Button7_Click" />
+            <asp:Panel ID="Panel2" runat="server">
+    <asp:Button ID="btnCPU" runat="server" CssClass="PartCategoryButton" Text="CPU" OnClick="Button1_Click" />
+    <asp:Button ID="btnMotherboard" runat="server" CssClass="PartCategoryButton" Text="Motherboard" OnClick="Button2_Click" />
+    <asp:Button ID="btnMemory" runat="server" CssClass="PartCategoryButton" Text="Memory" OnClick="Button3_Click" />
+    <asp:Button ID="btnStorage" runat="server" CssClass="PartCategoryButton" Text="Storage" OnClick="Button4_Click" />
+    <asp:Button ID="btnVideo" runat="server" CssClass="PartCategoryButton" Text="Video Cards" OnClick="Button5_Click" />
+    <asp:Button ID="btnPower" runat="server" CssClass="PartCategoryButton" Text="Power Supplies" OnClick="Button6_Click" />
+    <asp:Button ID="btnCases" runat="server" CssClass="PartCategoryButton" Text="Cases" OnClick="Button7_Click" />
+            </asp:Panel>
+            <p style="clear:both;">
 
-            <br />
-            <br />
-            <br />
-            <br />
+            </p>
 
         </asp:View>
     </asp:MultiView>

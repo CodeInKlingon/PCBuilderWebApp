@@ -31,7 +31,7 @@ namespace WebApplication
                         cl.InitializePart(p);
                         Panel1.Controls.Add(cl);
                     }
-
+                    displayDuplicateStatus();
                 }
                 else
                 {
@@ -42,6 +42,45 @@ namespace WebApplication
             {
                 Response.Redirect("Login.aspx");
             }
+        }
+
+        void displayDuplicateStatus() {
+            if (config.countCPU >= 1)
+            {
+                Panel2.Controls.Remove(btnCPU);
+                btnCPU.Dispose();
+            }
+            if (config.countMotherboard >= 1)
+            {
+                Panel2.Controls.Remove(btnMotherboard);
+                btnMotherboard.Dispose();
+            }
+            if (config.countMemory >= 1)
+            {
+                Panel2.Controls.Remove(btnMemory);
+                btnMemory.Dispose();
+            }
+            if (config.countStorage >= 1)
+            {
+                Panel2.Controls.Remove(btnStorage);
+                btnStorage.Dispose();
+            }
+            if (config.countGraphics >= 1)
+            {
+                Panel2.Controls.Remove(btnVideo);
+                btnVideo.Dispose();
+            }
+            if (config.countPower >= 1)
+            {
+                Panel2.Controls.Remove(btnPower);
+                btnPower.Dispose();
+            }
+            if (config.countCase >= 1)
+            {
+                Panel2.Controls.Remove(btnCases);
+                btnCases.Dispose();
+            }
+
         }
 
         protected void txtConfigName_TextChanged(object sender, EventArgs e)
@@ -58,6 +97,9 @@ namespace WebApplication
                 Response.Redirect("Configuration.aspx");
             }
         }
+
+
+        //add product buttons on click events
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Redirect("Parts.aspx?Category=" + 0);

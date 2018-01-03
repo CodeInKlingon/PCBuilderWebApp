@@ -16,13 +16,13 @@ namespace WebApplication
 
         public List<PCPart> parts;
 
-        int countCPU = 0;
-        int countMotherboard = 0;
-        int countCase = 0;
-        int countStorage = 0;
-        int countGraphics = 0;
-        int countMemory = 0;
-        int countPower = 0;
+        public int countCPU = 0;
+        public int countMotherboard = 0;
+        public int countCase = 0;
+        public int countStorage = 0;
+        public int countGraphics = 0;
+        public int countMemory = 0;
+        public int countPower = 0;
 
         //constructor that reads data from sql
         public PCConfiguration(int configID)
@@ -60,7 +60,7 @@ namespace WebApplication
         public void LoadItems()
         {
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Databas1ConnectionString"].ConnectionString);
-            SqlCommand cmd = new SqlCommand("Select * from ConfigItems Config_Id = " + ConfigID + ";", conn);
+            SqlCommand cmd = new SqlCommand("Select * from ConfigItems where Config_Id = " + ConfigID + ";", conn);
             SqlDataReader reader;
 
             conn.Open();
@@ -74,9 +74,9 @@ namespace WebApplication
                     parts.Add(new PCPart(reader.GetInt32(2)));
                 }
                 //all rows have been read 
-                    
-                //count the parts and add up for each category    
 
+                //count the parts and add up for each category    
+                countCategory();
                 //sort pc parts.
                 SortItems();
             }
@@ -109,24 +109,31 @@ namespace WebApplication
 
         }
 
-        void countCategory(int category) {
+        void countCategory() {
+
+            //loop for each part in the parts list and switch on catergory
             foreach (PCPart p in parts) {
                 switch (p.category) {
-                    case 1:
+                    case 0:
                         countCPU++;
                         break;
-                    case 2:
+                    case 1:
                         countMotherboard++;
                         break;
-                    case 3:
+                    case 2:
+                        countMemory++;
                         break;
                     case 4:
+                        countStorage++;
                         break;
                     case 5:
+                        countGraphics++;
                         break;
                     case 6:
+                        countPower++;
                         break;
                     case 7:
+                        countCase++;
                         break;
                 }
             }

@@ -13,7 +13,7 @@ namespace WebApplication
         public int Product_Id { get; private set; }
         public string ProductName { get; private set; }
         public float ProductPrice { get; private set; }
-        public int Manufacturer_Id { get; private set; }
+        public string Manufacturer{ get; private set; }
         public string FileName { get; private set; }
         public int category { get; private set; }
 
@@ -29,9 +29,10 @@ namespace WebApplication
             reader.Read();
             Product_Id = reader.GetInt32(0);
             ProductName = reader.GetString(1);
-            Manufacturer_Id = reader.GetInt32(2);
+            Manufacturer = reader.GetString(2);
             FileName = reader.GetString(3);
             ProductPrice = (float)reader.GetDouble(5);
+            category = reader.GetInt32(4);
             conn.Close();
         }
 

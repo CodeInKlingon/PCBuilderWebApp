@@ -28,7 +28,7 @@ namespace WebApplication
                 int userCount = (int)comm.ExecuteNonQuery();
                 sql = "SELECT current_value FROM sys.sequences WHERE name = 'config_sequence' ";
                 comm = new SqlCommand(sql, conn);
-                Session["   "] = (int)comm.ExecuteScalar();
+                Session["ConfigID"] = (int)comm.ExecuteScalar();
                 conn.Close();
                 Response.Redirect("Configuration.aspx");
                 

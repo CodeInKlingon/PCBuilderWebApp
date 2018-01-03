@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -26,6 +28,21 @@ namespace WebApplication
         {
             Session["ConfigID"] = ConfigID;
             Response.Redirect("Configuration.aspx");
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+
+            //drop config from database
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Databas1ConnectionString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("Delete Configs where Config_Id = " + ConfigID + "", conn);
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
+
+            //refresh page to view updated list of configurations
+            Response.Redirect("MyConfigurations.aspx");
         }
     }
 }

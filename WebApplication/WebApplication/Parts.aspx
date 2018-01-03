@@ -7,13 +7,16 @@
         <asp:View ID="View2" runat="server">
             <asp:Button ID="Button1" runat="server" Text="CPU" CssClass="PartCategoryButton" OnClick="Button1_Click" />
             <asp:Button ID="Button2" runat="server" CssClass="PartCategoryButton" Text="Motherboard" OnClick="Button2_Click" />
-            <asp:Button ID="Button3" runat="server" CssClass="PartCategoryButton" Text="Storage" OnClick="Button3_Click" />
+            <asp:Button ID="Button3" runat="server" CssClass="PartCategoryButton" Text="Memory" OnClick="Button3_Click" />
             <br />
-            <asp:Button ID="Button4" runat="server" CssClass="PartCategoryButton" Text="Memory" OnClick="Button4_Click" />
+            <asp:Button ID="Button4" runat="server" CssClass="PartCategoryButton" Text="Storage" OnClick="Button4_Click" />
             <asp:Button ID="Button5" runat="server" CssClass="PartCategoryButton" Text="Video Cards" OnClick="Button5_Click" />
             <asp:Button ID="Button6" runat="server" CssClass="PartCategoryButton" Text="Power Supplies" OnClick="Button6_Click" />
             <br />
             <asp:Button ID="Button7" runat="server" CssClass="PartCategoryButton" Text="Cases" OnClick="Button7_Click" />
+        <p style="clear:both;">
+
+            </p>
         </asp:View>
         <asp:View ID="View1" runat="server">
             <div id="searchMenu">
@@ -36,7 +39,7 @@
                 Search Filters<br />
                 <br />
                 Manufacturer:<br />
-                <asp:CheckBoxList ID="chkListMan" runat="server">
+                <asp:CheckBoxList ID="chkListMan" runat="server" AutoPostBack="True" OnSelectedIndexChanged="chkListMan_SelectedIndexChanged">
                 </asp:CheckBoxList>
                 <br />
                 Minimum Price:<br />
@@ -47,16 +50,13 @@
                 <asp:TextBox ID="TextBox2" runat="server" Columns="12" TextMode="Range">100</asp:TextBox>
             </div>
             <div id="searchResults">
-                <br />
-                <br />
-                <br />
+               
                 <asp:PlaceHolder ID="PlaceHolder1" runat="server">No Results Found</asp:PlaceHolder>
-                <br />
-                <br />
-                <br />
-                <br />
+               <p style="clear:both;">&nbsp;</p>
+                
             </div>
-            <div class="floatRight" id="seachPages">Previous Page&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next Page</div>
+            <div class="floatRight" id="seachPages"><p style="clear:both;">
+                    &nbsp;</p></div>
         </asp:View>
      </asp:MultiView>
 </asp:Content>

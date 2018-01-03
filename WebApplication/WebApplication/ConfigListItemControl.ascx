@@ -10,7 +10,7 @@
 
     &nbsp;&nbsp;&nbsp;
 
-    <asp:Button ID="btnDelete" runat="server" Text="Delete" />
+    <asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" />
 
 </div>
 
