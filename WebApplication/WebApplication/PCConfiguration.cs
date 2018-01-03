@@ -93,12 +93,12 @@ namespace WebApplication
 
             List<PCPart> sortedParts = new List<PCPart>();
 
-            while (parts.Count > 1)
+            while (parts.Count >= 1)
             {
                 PCPart nextPart = parts[0];
                 foreach (PCPart p in parts)
                 {
-                    if (p.Product_Id >= nextPart.Product_Id) {
+                    if (p.Product_Id <= nextPart.Product_Id) {
                         nextPart = p;
                     }
                 }
@@ -123,16 +123,16 @@ namespace WebApplication
                     case 2:
                         countMemory++;
                         break;
-                    case 4:
+                    case 3:
                         countStorage++;
                         break;
-                    case 5:
+                    case 4:
                         countGraphics++;
                         break;
-                    case 6:
+                    case 5:
                         countPower++;
                         break;
-                    case 7:
+                    case 6:
                         countCase++;
                         break;
                 }

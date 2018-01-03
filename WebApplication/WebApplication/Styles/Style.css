@@ -1,8 +1,8 @@
 ﻿body {
-    font-family:Arial;
+    font-family: Arial;
     margin: 0 !important;
     padding: 0 !important;
-    background-color: white;
+    background-color: #ededed;
 }
 
 .inner {
@@ -12,7 +12,7 @@
 }
 
 #headerContainer {
-    background-color: #ffffff;
+    background-color: #ededed;
     height: 100px;
     margin-bottom: 0px;
 }
@@ -72,7 +72,7 @@
     color: #ffffff;
 }
 #contentContainer {
-    background-color: #ededed;
+    background-color: #ffffff;
     height: auto;
 }
 #mainContent {
@@ -101,7 +101,7 @@
 }
 #footerContainer {
     clear: both;
-    background-color: #ffffff;
+    background-color: #ededed;
     height:100%;
 }
 
