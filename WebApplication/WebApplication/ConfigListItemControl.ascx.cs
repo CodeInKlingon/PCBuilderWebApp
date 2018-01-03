@@ -14,8 +14,8 @@ namespace WebApplication
         int ConfigID; 
         public void InitializeConfig(int configID, string configName, string dateCreated)
         {
-            ConfigID = configID; 
-            lblConfigName.Text = configName;
+            ConfigID = configID;
+            lblConfigName.Text = configName.Substring(0, 30);
             lblDate.Text = dateCreated;
         }
 

@@ -29,6 +29,31 @@ namespace WebApplication
                     foreach (PCPart p in config.parts) {
                         ConfigParts cl = (ConfigParts)Page.LoadControl("ConfigParts.ascx");
                         cl.InitializePart(p);
+                        switch (p.category)
+                        {
+                            case 0:
+                                if (config.countCPU > 1) { cl.SetWarning(); }
+                                break;
+                            case 1:
+                                if (config.countMotherboard > 1) { cl.SetWarning(); }
+                                break;
+                            case 2:
+                                if (config.countMemory > 1) { cl.SetWarning(); }
+                                break;
+                            case 3:
+                                if (config.countStorage > 1) { cl.SetWarning(); }
+                                break;
+                            case 4:
+                                if (config.countGraphics > 1) { cl.SetWarning(); }
+                                break;
+                            case 5:
+                                if (config.countPower > 1) { cl.SetWarning(); }
+                                break;
+                            case 6:
+                                if (config.countCase > 1) { cl.SetWarning(); }
+                                break;
+                        }
+
                         Panel1.Controls.Add(cl);
                     }
                     displayDuplicateStatus();

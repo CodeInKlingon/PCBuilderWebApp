@@ -13,6 +13,7 @@
     <asp:TextBox ID="txtConfigName" runat="server"  AutoPostBack="true" OnTextChanged="txtConfigName_TextChanged">ConfigNameGoesHere</asp:TextBox>
             <asp:Button ID="btnSave" runat="server" Text="Update Name" OnClick="btnSave_Click" />
             <br />
+            <br />
             <asp:Panel ID="Panel1" runat="server">
             </asp:Panel>
 <br />

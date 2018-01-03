@@ -142,6 +142,7 @@
     text-align: right;
     width: 300px;
     float: left;
+    
 }
 .configListItem {
     border: none;
@@ -153,4 +154,22 @@
     padding:2px 0px 2px 15px;
     margin-bottom:25px;
 
+}
+
+.confiogPart {
+    border: none;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    width: 645px;
+    height: auto;
+    padding: 10px 10px 5px 10px;
+
+}
+.confiogPartWarning {
+    border: none;
+    border-radius: 8px;
+    background-color: #d5b69c;
+    width: 645px;
+    height: auto;
+    padding: 10px 10px 5px 10px;
 }

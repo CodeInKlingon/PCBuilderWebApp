@@ -54,6 +54,20 @@ namespace WebApplication
 
         }
 
+        public void SetWarning() {
+            Image1.Visible = true;
+            LiteralControl linebreakTag = default(LiteralControl);
+            linebreakTag = new LiteralControl("<br />");
+            Panel1.Controls.Add(linebreakTag);
+            Label label = new Label();
+            label.ID = "WarningLabel";
+            label.Text = "Another item already exists for this type.";
+            Panel1.Controls.Add(label);
+
+            partContainerDiv.Attributes["class"] = "confiogPartWarning";
+
+        }
+
         protected void lblName_Click(object sender, EventArgs e)
         {
             //SelectItem();
@@ -67,7 +81,7 @@ namespace WebApplication
         protected void btnRemove_Click(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Databas1ConnectionString"].ConnectionString);
-            SqlCommand cmd = new SqlCommand("Delete from ConfigItems where Config_Id = '" + Session["ConfigId"] + "' and Product_Id = '" +thisPart.Product_Id+"';", conn);
+            SqlCommand cmd = new SqlCommand("Delete top (1) from ConfigItems where Config_Id = '" + Session["ConfigId"] + "' and Product_Id = '" +thisPart.Product_Id+ "' ;", conn);
             conn.Open();
             cmd.ExecuteNonQuery();
             conn.Close();
