@@ -11,7 +11,7 @@ namespace WebApplication
 {
     public partial class PartsListItem : System.Web.UI.UserControl
     {
-        PCPart thisPart;
+        public PCPart thisPart;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -57,6 +57,7 @@ namespace WebApplication
         protected void lblName_Click(object sender, EventArgs e)
         {
             SelectItem();
+
         }
 
         protected void imgPreview_Click(object sender, ImageClickEventArgs e)

@@ -20,8 +20,7 @@
         </asp:View>
         <asp:View ID="View1" runat="server">
             <div id="searchMenu">
-                <div class="floatRight">Sort Results By: <asp:DropDownList ID="DropDownList1" runat="server">
-                    <asp:ListItem>Popularity</asp:ListItem>
+                <div class="floatRight">Sort Results By: <asp:DropDownList ID="ddlOrder" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlOrder_SelectedIndexChanged">
                     <asp:ListItem>Price: Highest First</asp:ListItem>
                     <asp:ListItem>Price: Lowest First</asp:ListItem>
                 </asp:DropDownList></div>
@@ -43,11 +42,15 @@
                 </asp:CheckBoxList>
                 <br />
                 Minimum Price:<br />
-                <asp:TextBox ID="TextBox1" runat="server" Columns="12" TextMode="Range">0</asp:TextBox>
+                <asp:TextBox ID="rgMin" runat="server" Columns="12" TextMode="Range" AutoPostBack="True" OnTextChanged="rgMin_TextChanged">0</asp:TextBox>
+                <asp:Label ID="lblMin" runat="server" Text="0"></asp:Label>
                 <br />
                 <br />
                 Maximum Price:<br />
-                <asp:TextBox ID="TextBox2" runat="server" Columns="12" TextMode="Range">100</asp:TextBox>
+                <asp:TextBox ID="rgMax" runat="server" Columns="12" TextMode="Range" AutoPostBack="True" OnTextChanged="rgMax_TextChanged">100</asp:TextBox>
+                <asp:Label ID="lblMax" runat="server" Text="0"></asp:Label>
+                <br />
+                <br />
             </div>
             <div id="searchResults">
                

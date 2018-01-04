@@ -52,8 +52,7 @@ namespace WebApplication
             else {
                 //add control to prompt for login
                 //Panel1.Controls.Clear();
-                LoginAndRegisterPromptControl uc = (LoginAndRegisterPromptControl)Page.LoadControl("LoginAndRegisterPromptControl.ascx");
-                Panel1.Controls.Add(uc);
+                Response.Redirect("Login.aspx");
             }
         }
     }

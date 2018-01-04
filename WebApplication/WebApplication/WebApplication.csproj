@@ -89,6 +89,7 @@
     <Content Include="Configuration.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Images\banner.png" />
+    <Content Include="Login.aspx" />
     <Content Include="LoginAndRegisterPromptControl.ascx" />
     <Content Include="MyConfigurations.aspx" />
     <Content Include="Parts.aspx" />
@@ -155,6 +156,13 @@
     </Compile>
     <Compile Include="Default.Master.designer.cs">
       <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginAndRegisterPromptControl.ascx.cs">
       <DependentUpon>LoginAndRegisterPromptControl.ascx</DependentUpon>

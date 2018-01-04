@@ -103,13 +103,13 @@ namespace WebApplication {
         protected global::System.Web.UI.WebControls.View View1;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// ddlOrder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlOrder;
         
         /// <summary>
         /// partsMenu control.
@@ -130,22 +130,40 @@ namespace WebApplication {
         protected global::System.Web.UI.WebControls.CheckBoxList chkListMan;
         
         /// <summary>
-        /// TextBox1 control.
+        /// rgMin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox rgMin;
         
         /// <summary>
-        /// TextBox2 control.
+        /// lblMin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.Label lblMin;
+        
+        /// <summary>
+        /// rgMax control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox rgMax;
+        
+        /// <summary>
+        /// lblMax control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMax;
         
         /// <summary>
         /// PlaceHolder1 control.

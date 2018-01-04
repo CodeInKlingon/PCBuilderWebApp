@@ -46,6 +46,7 @@ namespace WebApplication
             Session["Username"] = null;
             Session["CongifID"] = null;
             MultiView1.ActiveViewIndex = 0;
+            Response.Redirect("Default.aspx");
         }
 
         protected void btnLogin2_Click(object sender, EventArgs e)
