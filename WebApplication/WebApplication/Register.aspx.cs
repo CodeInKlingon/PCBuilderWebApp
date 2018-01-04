@@ -75,6 +75,8 @@ namespace WebApplication
                 comm = new SqlCommand(sql, conn);
                 comm.ExecuteNonQuery();
                 conn.Close();
+                Session["Username"] = txtUsername.Text;
+                Response.Redirect("MyConfigurations.aspx");
             }
             else
             {

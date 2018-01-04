@@ -51,6 +51,7 @@
                 <asp:Label ID="lblMax" runat="server" Text="0"></asp:Label>
                 <br />
                 <br />
+                <p style="clear:both;">&nbsp;</p>
             </div>
             <div id="searchResults">
                
@@ -58,8 +59,9 @@
                <p style="clear:both;">&nbsp;</p>
                 
             </div>
-            <div class="floatRight" id="seachPages"><p style="clear:both;">
-                    &nbsp;</p></div>
+            <div class="floatRight" id="seachPages">
+                <p style="clear:both;">
+                    &nbsp;</p></div><p style="clear:both;">&nbsp;</p>
         </asp:View>
      </asp:MultiView>
 </asp:Content>

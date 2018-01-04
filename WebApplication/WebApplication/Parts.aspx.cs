@@ -37,11 +37,14 @@ namespace WebApplication
             else
             {
                 //category selected
+                category = Convert.ToInt32(Request.QueryString["Category"]);
                 MultiView1.ActiveViewIndex = 1;
                 loadMaxPrice();
                 LoadParts();
-
-                loadManufacturers();
+                if (!Page.IsPostBack)
+                {
+                    loadManufacturers();
+                }
                 
             }
         }
@@ -85,7 +88,7 @@ namespace WebApplication
         {
             //sql statements to load products
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Databas1ConnectionString"].ConnectionString);
-            category = Convert.ToInt32(Request.QueryString["Category"]);
+            
 
 
             //build string for order by
@@ -127,7 +130,7 @@ namespace WebApplication
         }
 
         void loadManufacturers() {
-            chkListMan.Items.Clear();
+            //chkListMan.Items.Clear();
 
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Databas1ConnectionString"].ConnectionString);
             SqlCommand cmd = new SqlCommand("SELECT DISTINCT Manufacturer from Products where PartType = " + category + "", conn);
@@ -141,8 +144,6 @@ namespace WebApplication
             }
             reader.Close();
             conn.Close();
-
-            //loadMaxPrice();
         }
 
         void loadMaxPrice() {

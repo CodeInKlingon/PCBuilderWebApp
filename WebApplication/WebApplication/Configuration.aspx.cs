@@ -56,7 +56,12 @@ namespace WebApplication
 
                         Panel1.Controls.Add(cl);
                     }
-                    displayDuplicateStatus();
+                    hideButtons();
+                    if (config.parts.Count > 0) {
+                        Button checkoutButton = new Button();
+                        checkoutButton.Text = "Checkout";
+
+                    }
                 }
                 else
                 {
@@ -69,7 +74,7 @@ namespace WebApplication
             }
         }
 
-        void displayDuplicateStatus() {
+        void hideButtons() {
             if (config.countCPU >= 1)
             {
                 Panel2.Controls.Remove(btnCPU);
