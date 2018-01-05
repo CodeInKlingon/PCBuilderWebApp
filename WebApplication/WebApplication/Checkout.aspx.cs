@@ -164,7 +164,7 @@ namespace WebApplication
 
         protected void btnPurchase_Click(object sender, EventArgs e)
         {
-            if (Page.IsValid || !Page.IsValid) {
+            if (Page.IsValid) {
                 if (config.parts.Count > 0)
                 {
                     string address = txtAddress.Text + " " + txtCity.Text + " " + ddlProvince.SelectedValue.ToString() + " " + txtPostal;

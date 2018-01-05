@@ -48,9 +48,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Security Code<asp:TextBox ID="txtSecurity" runat="server" Width="62px"></asp:TextBox>
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtExpiry" ErrorMessage="Invalid Expiry" ValidationGroup="valid"></asp:RegularExpressionValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtExpiry" ErrorMessage="Invalid Expiry" ValidationGroup="valid" ValidationExpression="^\d{2}\ \d{2}$"></asp:RegularExpressionValidator>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtSecurity" ErrorMessage="Invalid security code" ValidationGroup="valid"></asp:RegularExpressionValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtSecurity" ErrorMessage="Invalid security code" ValidationGroup="valid" ValidationExpression="^\d{3}$"></asp:RegularExpressionValidator>
     <br />
     <br />
     <br />

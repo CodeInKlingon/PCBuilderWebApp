@@ -16,6 +16,7 @@ namespace WebApplication
 
         public List<PCPart> parts;
 
+        //used to hide buttons and add warnings
         public int countCPU = 0;
         public int countMotherboard = 0;
         public int countCase = 0;
@@ -39,13 +40,15 @@ namespace WebApplication
 
             if (reader.HasRows)
             {
-                while (reader.Read())
-                {
-                    ConfigID = reader.GetInt32(0);
-                    Username = reader.GetString(1);
-                    Name = reader.GetString(2);
-                    LoadItems();
-                }
+                reader.Read();
+                
+                ConfigID = reader.GetInt32(0);
+                Username = reader.GetString(1);
+                Name = reader.GetString(2);
+
+                //loads config items from database
+                LoadItems();
+                
             }
             else
             {
@@ -77,6 +80,7 @@ namespace WebApplication
 
                 //count the parts and add up for each category    
                 countCategory();
+
                 //sort pc parts.
                 SortItems();
             }
@@ -88,7 +92,7 @@ namespace WebApplication
             conn.Close();
         }
 
-        //sorts items by product id ... i hope, not tested yet
+        //sorts items by product id
         void SortItems() {
 
             List<PCPart> sortedParts = new List<PCPart>();

@@ -130,7 +130,6 @@ namespace WebApplication
         }
 
         void loadManufacturers() {
-            //chkListMan.Items.Clear();
 
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Databas1ConnectionString"].ConnectionString);
             SqlCommand cmd = new SqlCommand("SELECT DISTINCT Manufacturer from Products where PartType = " + category + "", conn);
