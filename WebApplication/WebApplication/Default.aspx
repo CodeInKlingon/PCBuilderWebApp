@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Content" runat="server">
     <p>
-    Featured Products</p>
+    <h1>Featured Products</h1></p>
 <p>
     &nbsp;</p>
 <p>

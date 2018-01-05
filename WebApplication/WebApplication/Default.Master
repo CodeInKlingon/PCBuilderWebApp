@@ -52,7 +52,7 @@
                         <li><a href="Default.aspx">Home</a></li>
                         <li><a href="MyConfigurations.aspx">My Configurations</a></li>
                         <li><a href="Parts.aspx">Parts</a></li>
-                        <li> <a href="Checkout.aspx">Checkout</a></li>
+                        
                         <li> <a href="About.aspx">About</a></li>
                     </ul>
                 </div>

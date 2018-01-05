@@ -19,6 +19,7 @@
         </asp:SqlDataSource>
     </asp:View>
     <asp:View ID="View2" runat="server">
+        <h1>My Configurations</h1>
         <asp:PlaceHolder ID="configPlaceHolder" runat="server"></asp:PlaceHolder>
         <br />
         <asp:Panel ID="Panel1" runat="server">

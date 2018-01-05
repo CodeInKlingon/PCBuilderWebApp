@@ -33,6 +33,9 @@ namespace WebApplication
                     while (reader.Read()) {
                         ConfigListItemControl cl = (ConfigListItemControl)Page.LoadControl("ConfigListItemControl.ascx");
                         cl.InitializeConfig(reader.GetInt32(0), reader.GetString(2), reader.GetDateTime(3).ToShortDateString());
+                        if (cl.ConfigID == Convert.ToInt32(Session["ConfigID"])) {
+                            cl.SetActive();
+                        }
                         Panel1.Controls.Add(cl);
                     }
                     CreateNewConfigControl uc = (CreateNewConfigControl)Page.LoadControl("CreateNewConfigControl.ascx");

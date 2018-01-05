@@ -11,7 +11,7 @@ namespace WebApplication
 {
     public partial class ConfigListItemControl : System.Web.UI.UserControl
     {
-        int ConfigID; 
+        public int ConfigID; 
         public void InitializeConfig(int configID, string configName, string dateCreated)
         {
             ConfigID = configID;
@@ -24,6 +24,11 @@ namespace WebApplication
 
         }
 
+        public void SetActive() {
+            btnSelect.Text = "Selected";
+            btnSelect.CssClass = "cliSelected";
+        }
+
         protected void btnSelect_Click(object sender, EventArgs e)
         {
             Session["ConfigID"] = ConfigID;
@@ -32,7 +37,9 @@ namespace WebApplication
 
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-
+            if (Convert.ToInt32(Session["ConfigID"]) == ConfigID) {
+                Session["ConfigID"] = null;
+            }
             //drop config from database
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Databas1ConnectionString"].ConnectionString);
             SqlCommand cmd = new SqlCommand("Delete Configs where Config_Id = " + ConfigID + "", conn);

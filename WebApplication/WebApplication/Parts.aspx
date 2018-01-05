@@ -33,7 +33,7 @@
         
             </div>
             
-            <div id="searchFilter">
+            <div id="searchFilter" >
                 <br />
                 Search Filters<br />
                 <br />
@@ -53,7 +53,7 @@
                 <br />
                 <p style="clear:both;">&nbsp;</p>
             </div>
-            <div id="searchResults">
+            <div id="searchResults" style="width:400px;" >
                
                 <asp:PlaceHolder ID="PlaceHolder1" runat="server">No Results Found</asp:PlaceHolder>
                <p style="clear:both;">&nbsp;</p>

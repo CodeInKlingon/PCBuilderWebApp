@@ -57,9 +57,16 @@ namespace WebApplication
                         Panel1.Controls.Add(cl);
                     }
                     hideButtons();
+
+                    
+                    if (Panel2.Controls.Count == 0)
+                    {
+                        lblAddParts.Text = "";
+                    }
+
                     if (config.parts.Count > 0) {
-                        Button checkoutButton = new Button();
-                        checkoutButton.Text = "Checkout";
+                        btnPurchase.Visible = true;
+                        lblConfigurationsParts.Visible = true;
 
                     }
                 }
@@ -110,6 +117,8 @@ namespace WebApplication
                 Panel2.Controls.Remove(btnCases);
                 btnCases.Dispose();
             }
+
+            
 
         }
 
@@ -163,6 +172,11 @@ namespace WebApplication
         protected void Button7_Click(object sender, EventArgs e)
         {
             Response.Redirect("Parts.aspx?Category=" + 6);
+        }
+
+        protected void btnPurchase_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Checkout.aspx");
         }
     }  
 }

@@ -110,14 +110,14 @@
 }
 
 .addPartButton {
-    height: 100px;
+    height: 50px;
     color: #3f87de;
     background-color: rgb(245, 245, 245);
     text-align: center;
     font-size:x-large;
-    width: 300px;
+    width: 670px;
     border: thick dashed #3f87de;
-    border-radius: 25px;
+    border-radius: 10px;
     margin-left:auto;
     margin-right:auto;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.31);
@@ -144,31 +144,113 @@
     
 }
 .configListItem {
-    border: none;
+    border: 2px;
+    border-color: #3f87de;
+    border-style: solid;
     border-radius: 8px;
-    background-color: rgb(203, 203, 203);
+    background-color: #efefef;
+    color: #464d55;
     width: 645px;
     height: 40px;
     line-height: 40px;
-    padding:2px 0px 2px 15px;
-    margin-bottom:25px;
+    padding: 2px 0px 2px 15px;
+    margin-bottom: 25px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
 
+.cliSelect {
+    background-color: #3f87de;
+    border-color: #3f87de;
+    border-style: solid;
+    border-radius: 3px;
+    color: white;
+}
+
+.cliSelected {
+    background-color: #3fde42;
+    border-color: #3fde42;
+    border-style: solid;
+    border-radius: 3px;
+    color: white;
+}
+
+.cliDelete {
+    background-color: #e84123;
+    border-color: #e84123;
+    border-style: solid;
+    border-radius: 3px;
+    color: white;
+    margin-right: 15px;
 }
 
 .confiogPart {
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
     background-color: #f1f1f1;
     width: 645px;
     height: auto;
     padding: 10px 10px 5px 10px;
+    margin-bottom: 15px;
 
 }
 .confiogPartWarning {
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
     background-color: #d5b69c;
     width: 645px;
     height: auto;
     padding: 10px 10px 5px 10px;
+    margin-bottom: 15px;
+}
+
+.billing {
+    width: 350px;
+    float: right;
+    margin-right: 50px;
+}
+
+.purchaseButton {
+    height: 60px;
+    line-height: 55px;
+    padding: 0px 15px 0px 15px;
+    color: #464d55;
+    background-color: #efc03e;
+    border-color: #e0ae23;
+    text-align: center;
+    font-size: x-large;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    margin-right: 90px;
+    float: right;
+}
+
+.orderButton {
+    height: 60px;
+    width: 200px;
+    line-height: 55px;
+    padding: 0px 15px 0px 15px;
+    color: #464d55;
+    background-color: #40ef3e;
+    border-color: #2fdb2d;
+    text-align: center;
+    font-size: x-large;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top:40px;
+    clear:both;
+}
+
+.pli {
+    background-color: #f8f8f8;
+    margin-bottom: 15px;
+    padding: 10px 10px 10px 15px;
+    border-radius: 8px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ededed;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.05);
+    text-align:center;
 }

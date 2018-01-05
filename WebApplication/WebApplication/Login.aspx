@@ -3,6 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Content" runat="server">
 
+                <h1>Login</h1>
                 Username<asp:TextBox ID="txtUsername" runat="server" ValidationGroup="login"></asp:TextBox>
                 <br />
                 Password<asp:TextBox ID="txtPassword" runat="server" TextMode="Password" ValidationGroup="login"></asp:TextBox>

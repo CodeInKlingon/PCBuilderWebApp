@@ -14,11 +14,14 @@
             <asp:Button ID="btnSave" runat="server" Text="Update Name" OnClick="btnSave_Click" />
             <br />
             <br />
+            <br />
+            <asp:Label ID="lblConfigurationsParts" runat="server" Text="Configuration Parts:" CssClass="textHeading" Visible="False"></asp:Label>
             <asp:Panel ID="Panel1" runat="server">
             </asp:Panel>
 <br />
     <br />
     <br />
+            <asp:Label ID="lblAddParts" runat="server" Text="Add Parts" CssClass="textHeading"></asp:Label>
             <asp:Panel ID="Panel2" runat="server">
     <asp:Button ID="btnCPU" runat="server" CssClass="PartCategoryButton" Text="CPU" OnClick="Button1_Click" />
     <asp:Button ID="btnMotherboard" runat="server" CssClass="PartCategoryButton" Text="Motherboard" OnClick="Button2_Click" />
@@ -27,6 +30,12 @@
     <asp:Button ID="btnVideo" runat="server" CssClass="PartCategoryButton" Text="Video Cards" OnClick="Button5_Click" />
     <asp:Button ID="btnPower" runat="server" CssClass="PartCategoryButton" Text="Power Supplies" OnClick="Button6_Click" />
     <asp:Button ID="btnCases" runat="server" CssClass="PartCategoryButton" Text="Cases" OnClick="Button7_Click" />
+                <br />
+                <br /><p> </p>
+                <p style="clear:both;">
+
+            </p>
+                <asp:Button ID="btnPurchase" runat="server" CssClass="orderButton" Text="Checkout" OnClick="btnPurchase_Click" Visible="False" />
             </asp:Panel>
             <p style="clear:both;">
 
