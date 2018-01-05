@@ -13,5 +13,10 @@ namespace WebApplication
         {
 
         }
+
+        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("Parts.aspx");
+        }
     }
 }

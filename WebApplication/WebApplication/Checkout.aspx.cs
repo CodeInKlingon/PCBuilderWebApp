@@ -161,5 +161,33 @@ namespace WebApplication
             reader.Close();
             conn.Close();
         }
+
+        protected void btnPurchase_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid || !Page.IsValid) {
+                if (config.parts.Count > 0)
+                {
+                    string address = txtAddress.Text + " " + txtCity.Text + " " + ddlProvince.SelectedValue.ToString() + " " + txtPostal;
+                    SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Databas1ConnectionString"].ConnectionString);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO Orders VALUES( NEXT VALUE FOR orederSequence , '" + Session["Username"] + "' , " + totalPrice + " , getdate() , '" + address + "' , '" + txtCreditNumber.Text + "' , '" + txtExpiry.Text + "' , '" + txtSecurity.Text + "' ); ", conn);
+
+                    conn.Open();
+
+                    cmd.ExecuteNonQuery();
+                    cmd = new SqlCommand("SELECT current_value FROM sys.sequences WHERE name = 'orederSequence'", conn);
+                    int orderID = Convert.ToInt32(cmd.ExecuteScalar());
+                    foreach (PCPart p in config.parts)
+                    {
+                        cmd = new SqlCommand("INSERT INTO OrderItems VALUES( NEXT VALUE FOR orederItemSequence, " + orderID + " , " + p.Product_Id + " , " + p.ProductPrice + " ); ", conn);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    conn.Close();
+
+                    Response.Redirect("OrderConfirmation.aspx");
+                }
+
+            }
+        }
     }
 }
